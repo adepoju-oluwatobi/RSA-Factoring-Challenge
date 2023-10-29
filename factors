@@ -3,17 +3,16 @@
 from sys import argv
 
 
-def factorize(numbers_to_check):
+def factorize(number_to_check):
     """"find two small numbers that multiply to give a given number"""
     i = 2
 
-    if numbers_to_check < 2:
+    if number_to_check < 2:
         return
-
-    while numbers_to_check % i:
+    
+    while number_to_check % i:
         i += 1
-    print("{:.0f}={:.0f}*{:.0f}".format(numbers_to_check, numbers_to_check / i, i))
-
+    print("{:.0f}={:.0f}*{:.0f}".format(number_to_check, number_to_check / i, i))
 
 if len(argv) != 2:
     exit()
